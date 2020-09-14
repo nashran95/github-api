@@ -12,7 +12,8 @@ Please follow instructions here:
 
 Run `npm install` within the **github-search-api-angular** folder.
 
-Then, run the following commands to install some dependency:
+Then, 
+run the following commands to install some dependency:
 `npm install`
 `npm install @angular-devkit/core`
 `npm install --save @angular/material`
