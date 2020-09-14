@@ -1,0 +1,39 @@
+<h5 class="mb-1">Recent search title:</h5>
+<!-- <p>{{ historySearchName }}</p> -->
+<div *ngFor="let name of historySearchName; let i = index">
+  <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+    </div>
+    <br>
+      <p><b> </b> {{i + 1}} - {{ name.title }} </p>
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action flex-column align-items-start">
+  <div class="d-flex w-100 justify-content-between">
+  </div>
+  <br>
+  <h5>Recent search results (All)</h5>
+  
+  <li *ngFor="let item of historySearch | paginate: { itemsPerPage: 10, currentPage: p }; let i = index" class="list-group">
+    <div class="list-group-item list-group-item-action flex-column align-items-start" id="pdfTable" #pdfTable>
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ item.name }}</h5>
+      </div>
+      <p class="mb-1">{{ item.description }}</p>
+      <br>
+      <p class="mb-1"><strong>URL:</strong> <a href="{{ item.html_url }}" target="_blank">{{ item.html_url }}</a></p>
+      <p class="mb-1"><strong>Forks count:</strong> {{ item.forks_count }}</p>
+      <p class="mb-1"><strong>Stargazers count:</strong> {{ item.stargazers_count }}</p>
+      <p class="mb-1"><strong>Watchers count:</strong> {{ item.watchers_count }}</p>
+      <p class="mb-1">
+        <strong>Open issues:</strong> {{ item.open_issues_count }}
+        <small *ngIf="item.open_issues_count > 0">(click <a routerLink="/repository/issues/{{ item.full_name }}">here</a> to check them out.)</small>
+      </p>
+    </div>
+  </li>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+
+
