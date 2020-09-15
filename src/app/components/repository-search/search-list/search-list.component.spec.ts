@@ -19,12 +19,6 @@ describe('SearchListComponent', () => {
     fixture.detectChanges();
   });
 
-//   it(`should have 'Search among GitHub repositories.' as title`, async(() => {
-//     fixture = TestBed.createComponent(SearchListComponent);
-//     component = fixture.debugElement.componentInstance;
-//     expect(component.subHeading).toEqual('Search among GitHub repositories.');
-//   }));
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
