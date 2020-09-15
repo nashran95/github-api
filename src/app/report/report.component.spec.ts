@@ -22,4 +22,11 @@ describe('ReportComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it(`should have 'Report Component' as title`, async(() => {
+  //   fixture = TestBed.createComponent(ReportComponent);
+  //   component = fixture.debugElement.componentInstance;
+  //   expect(component.historySearchName).toEqual(this.historySearchName);
+  // }));
+  
 });

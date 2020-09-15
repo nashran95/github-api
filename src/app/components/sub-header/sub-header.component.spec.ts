@@ -1,0 +1,32 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { SubHeaderComponent } from './sub-header.component';
+
+describe('SubHeaderComponent', () => {
+  let component: SubHeaderComponent;
+  let fixture: ComponentFixture<SubHeaderComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ SubHeaderComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SubHeaderComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+//   it(`should have 'Search among GitHub repositories.' as title`, async(() => {
+//     fixture = TestBed.createComponent(SearchListComponent);
+//     component = fixture.debugElement.componentInstance;
+//     expect(component.subHeading).toEqual('Search among GitHub repositories.');
+//   }));
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+  
+});
